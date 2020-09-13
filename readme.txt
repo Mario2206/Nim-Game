@@ -1,4 +1,4 @@
-Règle du jeu : Le joueur doit obtenir la dernière allumette pour gagner
+Règle du jeu : Le joueur qui obtient la dernière allumette a perdu
 
 A rendre : video ou repository github
 
