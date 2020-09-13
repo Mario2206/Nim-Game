@@ -7,7 +7,7 @@ const changeConfiguration = require('./config').changeConfiguration
 const menu = ()=> {
     prompt.question("1-Solo \n2-Multi\n3-options\n\n", choice => {
 
-        switch(parseInt(choice)) {
+        switch(parseInt(choice)) { 
 
             case 1: 
                 soloGame(false,config.numberMatches, menu)

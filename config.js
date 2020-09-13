@@ -7,7 +7,7 @@ const config = {
     max : 3
 }
 
-const changeConfiguration = (menu) => {
+const changeConfiguration = (menu) => { // Fonction gérant la configuration
 
     prompt.question("Choisir un nouveau symbole pour afficher les alumettes ", (input)=> {
 

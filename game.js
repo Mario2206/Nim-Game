@@ -1,7 +1,7 @@
 const prompt = require('./prompt')
 const config = require("./config").config
 
-function display(number) {
+function display(number) { //Affichage du nombre d'allumettes
 
     const matches = []
     let separator = []
@@ -17,7 +17,7 @@ function display(number) {
     console.log(separator + "Il y a : " + matches.join(" ") + "\n\n" + separator)
 }
 
-function askNumber(joueurNumber) {
+function askNumber(joueurNumber) { //Récuperation du nombre demandé à l'utilisateur
 
     return new Promise(resolve => {
 
@@ -33,7 +33,7 @@ function askNumber(joueurNumber) {
     })
 }
 
-function askToBot(current_matches) {
+function askToBot(current_matches) { //Génération d'un nombre (pour l'IA)
 
     const modulo = current_matches % 4
 
@@ -45,14 +45,14 @@ function askToBot(current_matches) {
 }
 
 
-function changePlayer(current_player, max_player) {
+function changePlayer(current_player, max_player) { // Changement de joueur
 
     current_player++
-    
+
     return current_player > max_player ? 1 : current_player
 }
 
-const soloGame = async (playerTurn,current_matches, menu) => {
+const soloGame = async (playerTurn,current_matches, menu) => { //Fonction gérant la partie solo
 
     if(current_matches <= 0) {
         const name = playerTurn ? "Joueur" : "IA"
@@ -82,7 +82,7 @@ const soloGame = async (playerTurn,current_matches, menu) => {
 
 }
 
-const multiGame = async (numberOfPlayers,current_player, current_matches, menu) =>{
+const multiGame = async (numberOfPlayers,current_player, current_matches, menu) =>{ // Fonction gérant la partie multijoueur
     
     
     display(current_matches)
