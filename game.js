@@ -37,7 +37,7 @@ function askToBot(current_matches) { //Génération d'un nombre (pour l'IA)
 
     const modulo = current_matches % 4
 
-    let iaChoice = modulo === 1 ? 1 : modulo === 0 ? 3 :  (current_matches % 4) - 1
+    let iaChoice = modulo === 1 ? config.min : modulo === 0 ? config.max :  modulo - 1
 
     console.log("IA retire " + iaChoice);
 
